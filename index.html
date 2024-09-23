@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/logotipo4-500.png" type="image/x-icon">
+    <title>HotelView</title>
+</head>
+
+<body>
+    <!-- Cabeçalho com menu e botões de login/cadastro -->
+    <header>
+        <nav id="navbar">
+            <div class="nav_container">
+                <img src="imagens/logotipo4.png" alt="logotipo">
+                <ul>
+                    <li><a href="#welcome">Início</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#hoteis">Hoteis</a></li>
+                    <li><a href="#">Familia</a></li>
+                    <li><a href="#">Promoções</a></li>
+
+                    <div class="register_button">
+                        <button id="signup_button"><a href="#">Sign Up</a></button>
+                        <button id="login_button"><a href="login.html">Login</a></button>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Conteúdo do site-->
+    <main>
+        <section id="welcome">
+            <div class="container">
+                <h2><span>Hotel</span>View</h2>
+                <hr>
+                <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing<br> elit. Dolor, eligendi laboriosam.Repellendus officia harum eaque.</p>
+                <a class="btn" href="#info">Sobre Nós</a>
+            </div>
+        </section>
+
+        <section id="info" class="bg-dark">
+            <div class="info-img">
+            </div>
+            <div id="info-history">
+                <h2><span class="text-primary">A história</span> Do nosso site</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda aliquam dolor alias iste autem,
+                    quaerat
+                    magni unde accusantium qui fuga placeat quidem quo pariatur, voluptatum, ea sequi? Corporis,
+                    explicabo
+                    quisquam dolor placeat praesentium nesciunt mollitia quos nobis natus voluptatum asperiores!</p>
+                <a href="#" class="btn btn-light">Read More</a>
+                </div>
+        </section>
+
+        <section id="hoteis">
+            <div>
+                <p class="gallery-title">Galeria de Imagens</p>
+                <p class="subtitle2">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+              <div class="flex-container">
+                <img src="imagens/hotel1.jpg" alt="hotel 1">
+                <img src="imagens/hotel2.jpg" alt="hotel 2">
+                </div>
+                <div class="flex-container">    
+                <img src="imagens/hotel3.jpg" alt="hotel 3">
+                <img src="imagens/hotel4.jpg" alt="hotel 4">
+                </div>
+        </section>
+
+        <section id="showcase">
+                <section class="product">
+                    <h2>Great Location</h2>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, omnis?
+                </section>
+                <section class="product highlight">
+                    <h2>Free Meals</h2>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, omnis?
+                </section>
+                <section class="product">
+                    <h2>Fitness Room</h2>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, omnis?
+                </section>
+        </section>
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+        <div class="container">
+            HotelView © 2024, All Rights Reserved
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    smoothScrollTo(targetElement);
+                }
+            });
+        });
+        
+        function smoothScrollTo(element) {
+            const targetPosition = element.getBoundingClientRect().top;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition;
+            const duration = 1000; // Duração da rolagem em milissegundos
+            let startTime = null;
+        
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+        
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+        
+            requestAnimationFrame(animation);
+        }
+        </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

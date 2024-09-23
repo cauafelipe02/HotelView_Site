@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login 2</title>
+</head>
+<body>
+    <!-- Cabeçalho com menu e botões de login/cadastro -->
+    <header>
+        <nav id="navbar">
+            <div class="nav_container">
+                <img src="imagens/logotipo4.png" alt="logotipo">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="index.html">Hoteis</a></li>
+                    <li><a href="#">Familia</a></li>
+                    <li><a href="#">Promoções</a></li>
+    
+                    <div class="register_button">
+                        <button id="signup_button"><a href="#">Sign Up</a></button>
+                        <button id="login_button"><a href="login.html">Login</a></button>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Conteúdo do login-->
+    <main id="container-flex">
+        <form action="">
+            <div class="titulo">
+                <h1>Login</h1>
+            </div>
+
+            <div class="container-label">
+                <label for="email">Digite seu e-mail*</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="container-label">
+                <label for="senha">Digite sua senha*</label>
+                <input type="password" id="senha">
+                <button type="button" class="eye">Mostrar</button>
+            </div>
+
+            <p class="esqueceu-senha">Esqueceu sua senha? 
+                <a href="#">Clique aqui!</a>
+            </p>
+
+            <button class="entrar">Entrar</button>
+
+            <a href="#" class="crate-account">Criar conta</a>
+
+            <p>Ou</p>
+
+            <div class="redes-sociais">
+                <a href="https://www.facebook.com"><img src="imagens/facebook-50.png" alt="Facebook logo"></a>
+                <a href="https://mail.google.com"><img src="imagens/gmail-50.png" alt="Instagram logo"></a>
+                <a href="https://x.com"><img src="imagens/twitter-50.png" alt="Twitter logo"></a>
+            </div>
+        </form>
+    </main>
+    <script src="login_script.js"></script>
+</body>
+</html>

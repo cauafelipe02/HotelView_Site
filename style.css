@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sedgwick Ave');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+    overflow-x: hidden;
+}
+
+/*Estilização barra de navegação*/
+
+nav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+
+    transition: top 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 1;
+}
+
+nav .nav_container{
+    display: flex;
+    background-color: rgba(27, 27, 27, 0.9);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+nav li{
+    margin: 35px 20px;
+    padding: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(248, 248, 248);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+nav ul li a:hover{
+    color: rgb(104, 103, 103);
+}
+
+nav img{
+    margin: -17px 0px 0px 20px;
+    padding: 0px;
+    width: 125px;
+    height: 120px;
+    left: 0px;
+    position: absolute;
+}
+
+.hidden {
+    top: -100px; /* Ajuste conforme necessário para esconder a navbar */
+    opacity: 0;
+  }
+
+/*Estilização dos botões login e signup*/
+
+nav ul .register_button{
+    display: flex;
+    position: absolute;
+    right: 20px;
+}
+
+nav ul .register_button button{
+    width: 75px;
+    height: 40px;
+    margin: 29px 0px 0px 15px;
+    padding: 0px;
+    border-radius: 10px;
+    border-style: solid;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+
+nav ul .register_button a{
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.register_button #login_button{
+    background-color: rgb(34, 80, 194);
+    border-color: rgb(34, 80, 194);
+}
+
+#login_button a{
+    color: white;
+
+}
+
+.register_button #signup_button{
+    border-color: white;
+    background-color: transparent;
+}
+
+#signup_button a{
+    color: white;
+}
+
+/*conteúdo do site*/
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    padding-bottom: 1.5 rem;
+}
+
+p {
+    margin: 2rem 0; 
+}
+
+footer{
+    background: #333;
+    color: #fff;
+    overflow: auto;
+}
+
+#info-history {
+    color:white;
+}
+
+#welcome {
+    background-image: url(imagens/background_site.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+
+    height: 100vh;   
+    padding-top: 13rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+}
+
+#welcome h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 5rem;
+    line-height: 4rem;
+    color: rgba(255, 255, 255, 0.900);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#welcome hr{
+    margin: 1rem 0;
+    border: none;
+    border-top: 5px solid rgba(255, 255, 255, 0.700);
+    width: 100%;
+}
+
+#welcome span{
+    font-weight: 300;
+    font-size: 5rem;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#welcome a{
+    margin-top: 50px;
+    margin-bottom: -30px;
+}
+
+.lead {
+    font-size: 25px;
+    padding-bottom: 5rem;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#info-history h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: white;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    padding: 0.5rem 2rem;
+    color: #fff;
+    background-color: rgba(255, 105, 60, 0.8);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover,  section.highlight{
+    background: #ffc062;
+    color: #333;
+}
+
+.btn-light {
+    background: #fff;
+    color: #333;
+}
+
+.bg-dark {
+    background: #333;
+}
+section#info {
+    height: 450px;
+}
+div.info-img {
+    float: left;
+    color: white;
+    height: 100%;
+    width: 50%;
+    background: url('https://source.unsplash.com/random')
+}
+
+div#info-history {
+    padding: 5%;
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#info-history h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+footer {
+    text-align: center; 
+    padding: 20px 0;
+}
+
+section#showcase{
+    padding-top: 3rem;
+}
+
+section.product {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+    padding: 3rem 0rem;
+    background-color: rgba(255, 202, 159, 0.8);
+}
+
+section.highlight{
+    background: #ffc062;
+    color: #333;
+}
+
+/*imagens dos hoteis*/
+
+.gallery-title {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 4rem;
+  }
+  .subtitle2 {
+    text-align: center;
+    font-size: 20px;
+    font-family: Noto Sans;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+  }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px 0;
+  }
+  .flex-container > img {
+    width: 400px;
+    margin: 10px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+  }
